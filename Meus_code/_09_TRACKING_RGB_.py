@@ -44,7 +44,7 @@ def compute_Tracking(frame, azul, verde, vermelho):
     gray = cv2.cvtColor(result, cv2.COLOR_BGR2GRAY)
     _,gray = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
     
-    contours, hierarchy = cv2.findContours(gray, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+    contours, _, _  = cv2.findContours(gray, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
     
     if contours:
         maxArea = cv2.contourArea(contours[0])
@@ -61,6 +61,8 @@ def compute_Tracking(frame, azul, verde, vermelho):
         xRect, yRect, wRect, hRect = cv2.boundingRect(cntMaxArea)
         
         cv2.rectangle(frame, (xRect, yRect), (xRect + wRect, yRect + hRect), (0, 0, 255), 2)
+    else:
+        maxArea = 0
     
     return frame, gray
 

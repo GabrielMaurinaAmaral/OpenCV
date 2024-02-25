@@ -7,7 +7,7 @@ def show_Image(img):
     
 def main():
     # acrscentando o zero em imread() elimina os canais de cor
-    obj_img = cv2.imread("Python\OpenCV\Meus_code\imagem_teste.png")
+    obj_img = cv2.imread("OpenCV\Meus_code\imagem_teste.png")
     
     # dados de altura, largura e canais de cor
     print(obj_img.shape)

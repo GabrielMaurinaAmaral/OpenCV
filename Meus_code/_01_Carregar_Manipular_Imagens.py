@@ -1,7 +1,7 @@
 import cv2
 
 # cria um objeto que lê e armazena na variável
-obj_img = cv2.imread("C:\CODE\PraticaBasica\Python\OpenCV\Meus_code\Foto_frame.png")
+obj_img = cv2.imread("OpenCV\Meus_code\Foto_frame.png")
 
 # verifica se a leitura da imagem foi bem sucedida
 if obj_img is not None:
